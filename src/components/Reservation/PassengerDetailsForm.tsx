@@ -1,5 +1,5 @@
-import { Card, CardContent, CardHeader, CardTitle } from "components/ui/card"
-import { Input } from "components/ui/input"
+import { Card, CardContent, CardHeader, CardTitle } from "components/ui/Card"
+import { Input } from "components/ui/Input"
 
 const PassengerDetailsForm = () => {
   return (
