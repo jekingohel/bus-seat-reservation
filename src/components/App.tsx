@@ -1,4 +1,4 @@
-import PageHeader from "components/__Shared/PageHeader"
+import PageHeader from "components/_Shared/PageHeader"
 import { Route, Routes } from "react-router-dom"
 import Dashboard from "components/Dashboard"
 import Reservation from "components/Reservation"
