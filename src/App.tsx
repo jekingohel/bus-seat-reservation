@@ -1,8 +1,8 @@
 import "./App.css"
-import PageHeader from "components/__shared/page-header"
+import PageHeader from "./components/__shared/page-header"
 import { Route, Routes } from "react-router-dom"
-import Dashboard from "components/Dashboard"
-import Reservation from "components/Reservation"
+import Dashboard from "./components/Dashboard"
+import Reservation from "./components/Reservation"
 
 function App() {
   return (
