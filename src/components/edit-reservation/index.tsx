@@ -6,7 +6,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "../ui/dialog"
+} from "components/ui/Dialog"
 import EditReservationForm from "./form"
 
 interface DeleteDialogProps {
@@ -24,7 +24,7 @@ const EditReservation = ({ children, data }: DeleteDialogProps) => {
           <DialogDescription>Edit Details of Reservation</DialogDescription>
         </DialogHeader>
         <div>
-          <EditReservationForm data={data}/>
+          <EditReservationForm data={data} />
         </div>
       </DialogContent>
     </Dialog>

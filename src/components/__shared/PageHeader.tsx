@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom"
-import MainNav from "./main-nav"
+import MainNav from "./MainNav"
+import { Icons } from "./Icons"
+
 const PageHeader = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 max-w-screen-md items-center">
         <div className="mr-4 hidden md:flex">
           <Link to="/" className="mr-6 flex items-center space-x-2">
+            <Icons.Logo className="h-6 w-6" />
             <span className="hidden font-bold sm:inline-block">
               seat/booking
             </span>
@@ -24,4 +27,3 @@ const PageHeader = () => {
 }
 
 export default PageHeader
-

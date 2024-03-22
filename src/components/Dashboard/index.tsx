@@ -5,11 +5,11 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "../../components/ui/table"
+} from "components/ui/Table"
 import bookings from "./data"
-import { Button } from "../../components/ui/button"
+import { Button } from "components/ui/Button"
 import { Pencil, Trash2 } from "lucide-react"
-import DeleteDialog from "../__shared/delete-dialog"
+import DeleteDialog from "../__Shared/DeleteDialog"
 import EditReservation from "../edit-reservation"
 
 const Dashboard = () => {
@@ -45,12 +45,20 @@ const Dashboard = () => {
                 </TableCell>
                 <TableCell className="px-0 py-2 text-left flex gap-x-2">
                   <EditReservation data={x}>
-                    <Button variant="outline" className="p-0 m-0 h-7 w-7" size="sm">
+                    <Button
+                      variant="outline"
+                      className="p-0 m-0 h-7 w-7"
+                      size="sm"
+                    >
                       <Pencil className="h-4 w-4" />
                     </Button>
                   </EditReservation>
                   <DeleteDialog>
-                    <Button variant="outline" className="p-0 m-0 h-7 w-7" size="sm">
+                    <Button
+                      variant="outline"
+                      className="p-0 m-0 h-7 w-7"
+                      size="sm"
+                    >
                       <Trash2 className="h-4 w-4" />
                     </Button>
                   </DeleteDialog>

@@ -1,10 +1,5 @@
-import {
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "../../ui/form"
-import { Input } from "../../ui/input"
+import { FormField, FormItem, FormLabel, FormMessage } from "components/ui/Form"
+import { Input } from "components/ui/Input"
 import { Control } from "react-hook-form"
 import { FormDataType } from "../formTypes"
 

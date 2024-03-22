@@ -1,10 +1,16 @@
-import { Button } from "../../ui/button"
-import { FormControl, FormField, FormItem, FormLabel, FormMessage } from "../../ui/form"
-import { Popover, PopoverContent, PopoverTrigger } from "../../ui/popover"
-import { cn } from "../../../lib/utils"
+import { Button } from "components/ui/Button"
+import {
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "components/ui/Form"
+import { Popover, PopoverContent, PopoverTrigger } from "components/ui/Popover"
+import { cn } from "lib/utils"
 import { Control } from "react-hook-form"
 import { format } from "date-fns"
-import { Calendar } from "../../ui/calendar"
+import { Calendar } from "components/ui/Calendar"
 import { FormDataType } from "../formTypes"
 import React from "react"
 import { CalendarIcon } from "lucide-react"

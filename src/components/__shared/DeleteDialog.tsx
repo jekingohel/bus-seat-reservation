@@ -9,7 +9,7 @@ import {
   AlertDialogTrigger,
   AlertDialogAction,
   AlertDialogCancel,
-} from "../../components/ui/alert-dialog"
+} from "../ui/AlertDialog"
 
 interface DeleteDialogProps {
   children: React.ReactNode
