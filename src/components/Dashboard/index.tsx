@@ -9,7 +9,7 @@ import {
 import bookings from "./data"
 import { Button } from "components/ui/Button"
 import { Pencil, Trash2 } from "lucide-react"
-import DeleteDialog from "../_Shared/DeleteDialog"
+import DeleteDialog from "../__Shared/DeleteDialog"
 import EditReservation from "../edit-reservation"
 
 const Dashboard = () => {

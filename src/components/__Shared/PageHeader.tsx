@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import MainNav from "./MainNav"
-import { Icons } from "./Icon"
+import { Icons } from "./Icons"
 
 const PageHeader = () => {
   return (
