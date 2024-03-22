@@ -6,7 +6,7 @@ import { z } from "zod"
 import FormSchema from "./formSchema"
 import Name from "./Fields/Name"
 import Email from "./Fields/Email"
-import { Label } from "components/ui/label"
+import { Label } from "components/ui/Label"
 
 const PassengerForm = () => {
   const form = useForm<z.infer<typeof FormSchema>>({
