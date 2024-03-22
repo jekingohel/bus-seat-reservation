@@ -1,12 +1,11 @@
-import "./App.css"
-import PageHeader from "components/__shared/page-header"
+import PageHeader from "components/__Shared/PageHeader"
 import { Route, Routes } from "react-router-dom"
 import Dashboard from "components/Dashboard"
 import Reservation from "components/Reservation"
 
 function App() {
   return (
-    <div className="App">
+    <div className="relative flex min-h-screen flex-col bg-background">
       <PageHeader />
       <Routes>
         <Route path={"/"} element={<Dashboard />} />

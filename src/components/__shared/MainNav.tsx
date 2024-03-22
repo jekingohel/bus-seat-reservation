@@ -8,7 +8,9 @@ const MainNav = () => {
         to="/"
         className={cn(
           "transition-colors hover:text-foreground/80",
-          location.pathname === "/" ? "text-foreground" : "text-foreground/60"
+          location.pathname === "/"
+            ? "text-foreground font-medium"
+            : "text-foreground/60"
         )}
       >
         Dashboard
@@ -18,7 +20,7 @@ const MainNav = () => {
         className={cn(
           "transition-colors hover:text-foreground/80",
           location.pathname === "/reservation"
-            ? "text-foreground"
+            ? "text-foreground font-medium"
             : "text-foreground/60"
         )}
       >
