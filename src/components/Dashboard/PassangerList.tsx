@@ -81,6 +81,13 @@ const PassangerList = () => {
             </TableRow>
           )
         })}
+        {passangers.length === 0 && (
+          <TableRow>
+            <TableCell colSpan={5} className="px-0 py-2 text-center">
+              No booking found
+            </TableCell>
+          </TableRow>
+        )}
       </TableBody>
     </Table>
   )
