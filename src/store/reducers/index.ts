@@ -1,8 +1,10 @@
 import { combineReducers } from "redux"
-import Init from "./Init"
+import CurrentReservation from "./CurrentReservation"
+import BookedPassangers from "./BookedPassangers"
 
 const CollectionOfReducers = combineReducers({
-  Init: Init,
+  CurrentReservation,
+  BookedPassangers,
 })
 
 export default CollectionOfReducers

@@ -1,8 +1,13 @@
+import { store as Store } from "store"
 const SeatAvailabilityInfo = () => {
+  const booked_seats = Store.getState().BookedPassangers.passangers
+  const available_seats = 40 - booked_seats.length
   return (
     <div className="w-full inline-flex flex-row justify-between items-center">
       <div className="inline-flex flex-col items-start">
-        <h3 className="text-md font-semibold">15 Seats Available</h3>
+        <h3 className="text-md font-semibold">
+          {`${available_seats} seats available`}
+        </h3>
         <h4 className="font-normal text-sm text-muted-foreground">
           Click on seat to select/deselet
         </h4>

@@ -1,7 +1,10 @@
 export interface Passanger {
   name: string
   email: string
+  seat: string
+  dateOfBooking: string
 }
-export interface FormDataType {
+
+export interface Passangers {
   passangers: Passanger[]
 }

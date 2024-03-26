@@ -1,4 +1,4 @@
-import { cn } from "../../lib/utils"
+import { cn } from "lib/utils"
 import { Link, useLocation } from "react-router-dom"
 const MainNav = () => {
   const location = useLocation()

@@ -1,23 +1,24 @@
 import { FormField, FormItem, FormLabel, FormMessage } from "components/ui/Form"
 import { Input } from "components/ui/Input"
 import { Control } from "react-hook-form"
-import { FormDataType } from "../formTypes"
+import { FormDataType } from "../FormTypes"
 
-interface EmailProps {
+interface SeatNumberProps {
   control: Control<FormDataType>
 }
 
-const Email: React.FC<EmailProps> = ({ control }) => {
+const SeatNumber: React.FC<SeatNumberProps> = ({ control }) => {
   return (
     <FormField
       control={control}
-      name="email"
+      name="seat"
       render={({ field }) => (
         <FormItem className="flex flex-col w-full">
-          <FormLabel>Email</FormLabel>
+          <FormLabel>Seat Number</FormLabel>
           <div className="relative">
             <Input
-              placeholder="Enter Email"
+              disabled={true}
+              placeholder="Enter Seat Number"
               className="pr-8 h-8"
               defaultValue={field.value || ""}
               onChange={(e) => field.onChange(e.target.value)}
@@ -30,4 +31,4 @@ const Email: React.FC<EmailProps> = ({ control }) => {
   )
 }
 
-export default Email
+export default SeatNumber

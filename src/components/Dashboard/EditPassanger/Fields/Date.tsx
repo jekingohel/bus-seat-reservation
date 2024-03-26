@@ -11,9 +11,9 @@ import { cn } from "lib/utils"
 import { Control } from "react-hook-form"
 import { format } from "date-fns"
 import { Calendar } from "components/ui/Calendar"
-import { FormDataType } from "../formTypes"
+import { FormDataType } from "../FormTypes"
 import React from "react"
-import { CalendarIcon } from "lucide-react"
+import { Icons } from "components/__Shared/Icons"
 
 interface DateProps {
   control: Control<FormDataType>
@@ -23,7 +23,7 @@ const Date: React.FC<DateProps> = ({ control }) => {
   return (
     <FormField
       control={control}
-      name="date_of_booking"
+      name="dateOfBooking"
       render={({ field }) => (
         <FormItem className="flex flex-col">
           <FormLabel>Date of Booking</FormLabel>
@@ -41,7 +41,7 @@ const Date: React.FC<DateProps> = ({ control }) => {
                   {field.value
                     ? format(field.value, "PPP")
                     : format(new window.Date(), "PPP")}
-                  <CalendarIcon className="ml-auto w-4" />
+                  <Icons.Calendar className="ml-auto w-4" />
                 </Button>
               </FormControl>
             </PopoverTrigger>

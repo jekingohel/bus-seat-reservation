@@ -13,9 +13,10 @@ import {
 
 interface DeleteDialogProps {
   children: React.ReactNode
+  onConfirm: any
 }
 
-const DeleteDialog = ({ children }: DeleteDialogProps) => {
+const DeleteDialog = ({ children, onConfirm }: DeleteDialogProps) => {
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>{children}</AlertDialogTrigger>
@@ -25,12 +26,12 @@ const DeleteDialog = ({ children }: DeleteDialogProps) => {
             CONFIRM ACTION
           </AlertDialogTitle>
           <AlertDialogDescription>
-            Are you sure you want to delete? This action will PERMANENTLY delete record and remove your data from our servers and CANNOT be undone.
+            Are you sure you want to remove?
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel>Cancel</AlertDialogCancel>
-          <AlertDialogAction>Continue</AlertDialogAction>
+          <AlertDialogAction onClick={onConfirm}>Continue</AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>

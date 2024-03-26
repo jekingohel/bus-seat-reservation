@@ -2,6 +2,7 @@ import PageHeader from "components/__Shared/PageHeader"
 import { Route, Routes } from "react-router-dom"
 import Dashboard from "components/Dashboard"
 import Reservation from "components/Reservation"
+import { Toaster } from "components/ui/Toaster"
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route path={"/"} element={<Dashboard />} />
         <Route path={"/reservation"} element={<Reservation />} />
       </Routes>
+      <Toaster />
     </div>
   )
 }
