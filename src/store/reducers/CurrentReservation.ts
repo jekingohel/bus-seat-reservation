@@ -4,7 +4,7 @@ import DefaultToObject from "store/defaults/DefaultToObject"
 import DefaultToArray from "store/defaults/DefaultToArray"
 
 import { addDays } from "date-fns"
-import { Passanger } from "store/types"
+import { Passenger } from "store/types"
 
 const container = DefaultToObject()
 
@@ -32,7 +32,7 @@ container[actionType.ACTION_CURRENT_RESERVATION_SET_DATE] = function (
 
 container[actionType.ACTION_CURRENT_RESERVATION_SET_PASSANGERS] = function (
   state: any,
-  payload: Passanger[]
+  payload: Passenger[]
 ) {
   return {
     ...state,

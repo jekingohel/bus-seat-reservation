@@ -2,7 +2,7 @@ import * as actionType from "store/actions/actionTypes"
 import StoreTemplate from "store/StoreTemplate"
 import DefaultToObject from "store/defaults/DefaultToObject"
 import DefaultToArray from "store/defaults/DefaultToArray"
-import { Passanger } from "store/types"
+import { Passenger } from "store/types"
 
 const container = DefaultToObject()
 
@@ -16,7 +16,7 @@ const BookedPassangers = StoreTemplate(defaultState(), container)
 
 container[actionType.ACTION_BOOKED_PASSANGERS_SET_PASSANGERS] = function (
   state: any,
-  payload: Passanger[]
+  payload: Passenger[]
 ) {
   return {
     ...state,
@@ -26,10 +26,10 @@ container[actionType.ACTION_BOOKED_PASSANGERS_SET_PASSANGERS] = function (
 
 container[actionType.ACTION_BOOKED_PASSANGERS_REMOVE_PASSANGER] = function (
   state: any,
-  payload: Passanger
+  payload: Passenger
 ) {
   const passangers = state.passangers.filter(
-    (passanger: Passanger) => passanger.email !== payload.email
+    (passanger: Passenger) => passanger.email !== payload.email
   )
   return {
     ...state,
@@ -39,9 +39,9 @@ container[actionType.ACTION_BOOKED_PASSANGERS_REMOVE_PASSANGER] = function (
 
 container[actionType.ACTION_BOOKED_PASSANGERS_UPDATE_PASSANGER] = function (
   state: any,
-  payload: Passanger
+  payload: Passenger
 ) {
-  const passangers = state.passangers.map((passenger: Passanger) =>
+  const passangers = state.passangers.map((passenger: Passenger) =>
     passenger.seat === payload.seat ? { ...passenger, ...payload } : passenger
   )
   return {

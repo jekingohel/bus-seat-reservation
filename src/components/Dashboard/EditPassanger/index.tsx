@@ -8,11 +8,11 @@ import {
   DialogTrigger,
 } from "components/ui/Dialog"
 import EditPassangerForm from "./Form"
-import { Passanger } from "store/types"
+import { Passenger } from "store/types"
 
 interface EditPassangerProps {
   children: React.ReactNode
-  data: Passanger
+  data: Passenger
 }
 
 const EditPassanger = ({ children, data }: EditPassangerProps) => {

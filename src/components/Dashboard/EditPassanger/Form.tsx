@@ -12,10 +12,10 @@ import { UpdateBookedPassanger } from "store/actions"
 import { store as Store } from "store"
 import { format } from "date-fns"
 import { useToast } from "components/ui/useToast"
-import { Passanger } from "store/types"
+import { Passenger } from "store/types"
 
 interface EditPassangerFormProps {
-  data: Passanger
+  data: Passenger
   onClose: any
 }
 
@@ -32,7 +32,7 @@ const EditPassangerForm: React.FC<EditPassangerFormProps> = ({
     resolver: zodResolver(FormSchema),
   })
   const onSubmit = (data: z.infer<typeof FormSchema>) => {
-    let passanger: Passanger = {
+    let passanger: Passenger = {
       name: data.name,
       email: data.email,
       seat: data.seat,

@@ -1,8 +1,5 @@
 import { Icons } from "components/__Shared/Icons"
-import { useEffect, useState } from "react"
-import { store as Store } from "store"
-import { SetCurrentReservationPassangers } from "store/actions"
-import { Passanger } from "store/types"
+import { useSelectedSeats } from "./SelectedSeatsContext"
 
 interface SeatGridPatternProps {
   numberOfSeats: number
@@ -17,13 +14,7 @@ const SeatGridPattern: React.FC<SeatGridPatternProps> = ({
   title,
   bookedSeats = [],
 }) => {
-  const currentPassangers = Store.getState().CurrentReservation.passangers
-  const currentSelectedSeats = currentPassangers.map(
-    (passanger: Passanger) => passanger.seat
-  )
-
-  const [selectedSeats, setSelectedSeats] =
-    useState<string[]>(currentSelectedSeats)
+  const { selectedSeats, setSelectedSeats } = useSelectedSeats()
 
   // Create an array of values from 1 to 20
   const values = Array.from({ length: numberOfSeats }, (_, index) => index + 1)
@@ -54,20 +45,6 @@ const SeatGridPattern: React.FC<SeatGridPatternProps> = ({
       }
     })
   }
-
-  useEffect(() => {
-    if (selectedSeats) {
-      let passangers: Passanger[] = selectedSeats.map((seat: string) => {
-        return {
-          name: "",
-          email: "",
-          seat,
-          dateOfBooking: Store.getState().CurrentReservation.boardingDate,
-        }
-      })
-      Store.dispatch(SetCurrentReservationPassangers(passangers))
-    }
-  }, [selectedSeats])
 
   return (
     <div className="inline-flex items-center overflow-y-auto">

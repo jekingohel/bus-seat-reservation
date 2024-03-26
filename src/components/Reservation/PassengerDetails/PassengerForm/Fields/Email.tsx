@@ -2,10 +2,10 @@ import { Input } from "components/ui/Input"
 import { Control } from "react-hook-form"
 import { FormField, FormItem, FormMessage } from "components/ui/Form"
 import React from "react"
-import { Passangers } from "store/types"
+import { Passengers } from "store/types"
 
 interface EmailProps {
-  control: Control<Passangers>
+  control: Control<Passengers>
   defaultValue?: string
   row: number
 }

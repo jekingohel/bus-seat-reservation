@@ -13,7 +13,7 @@ import { RemoveBookedPassanger } from "store/actions"
 import { store as Store } from "store"
 import DeleteDialog from "components/__Shared/DeleteDialog"
 import EditPassanger from "./EditPassanger"
-import { Passanger } from "store/types"
+import { Passenger } from "store/types"
 
 const PassangerList = () => {
   const { passangers } = useSelector((state: any) => state.BookedPassangers)
@@ -39,7 +39,7 @@ const PassangerList = () => {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {passangers.map((passanger: Passanger, index: number) => {
+        {passangers.map((passanger: Passenger, index: number) => {
           return (
             <TableRow key={index}>
               <TableCell className="px-0 py-2 text-left font-semibold">
