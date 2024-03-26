@@ -28,7 +28,7 @@ export const SelectedSeatsProvider = ({
   children: React.ReactNode
 }) => {
   const currentPassengers: Passenger[] =
-    Store.getState().CurrentReservation.passengers || []
+    Store.getState().CurrentReservation.passangers || []
   const currentSelectedSeats: string[] = currentPassengers.map(
     (passenger: Passenger) => passenger.seat
   )

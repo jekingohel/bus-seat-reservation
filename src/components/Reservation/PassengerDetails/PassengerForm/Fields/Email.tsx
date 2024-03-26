@@ -11,7 +11,7 @@ interface EmailProps {
 }
 
 const Email: React.FC<EmailProps> = ({ control, row, defaultValue }) => {
-  const [value, setValue] = React.useState(defaultValue || "")
+  const [value] = React.useState(defaultValue || "")
   return (
     <FormField
       control={control}

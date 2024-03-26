@@ -11,7 +11,7 @@ interface NameProps {
 }
 
 const Name: React.FC<NameProps> = ({ control, row, defaultValue }) => {
-  const [value, setValue] = React.useState(defaultValue || "")
+  const [value] = React.useState(defaultValue || "")
 
   return (
     <FormField
