@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from "react"
-import { Passenger } from "store/types" // Assuming the correct path to Passenger type
-import { store as Store } from "store" // Assuming the correct path to the store
+import { Passenger } from "store/types"
+import { store as Store } from "store"
 import { SetCurrentReservationPassangers } from "store/actions"
 
 interface SelectedSeatsContextType {

@@ -32,8 +32,8 @@ const PassengerForm = () => {
   })
 
   const { fields, replace } = useFieldArray({
-    control: form.control, // control props comes from useForm (optional: if you are using FormContext)
-    name: "passangers", // unique name for your Field Array
+    control: form.control,
+    name: "passangers",
   })
 
   const onSubmit = (data: z.infer<typeof FormSchema>) => {

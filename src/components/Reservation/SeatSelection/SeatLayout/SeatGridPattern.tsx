@@ -16,16 +16,13 @@ const SeatGridPattern: React.FC<SeatGridPatternProps> = ({
 }) => {
   const { selectedSeats, setSelectedSeats } = useSelectedSeats()
 
-  // Create an array of values from 1 to 20
   const values = Array.from({ length: numberOfSeats }, (_, index) => index + 1)
 
-  // Group the values by 5 items per row
   const rows = []
   for (let i = 0; i < values.length; i += 5) {
     rows.push(values.slice(i, i + 5))
   }
 
-  // Group the rows by two rows per group
   const groupedRows = []
   for (let i = 0; i < rows.length; i += 2) {
     groupedRows.push(rows.slice(i, i + 2))
